@@ -11,8 +11,14 @@ class Post extends Model
 
     protected $guarded = [];
 
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
+
     public function user()
     {
         return $this->belongsTo(\App\Models\User::class);
     }
+
+  
 }
